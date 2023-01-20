@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./movies.js"></script>
+  <!-- <script src="./index.js"></script> -->
+  <title>ComFlix-Movies</title>
+</head>
+<body>
+  <nav>
+    <figure class="logo__img--wrapper">
+      <img src="./assets/blinker-icon.png" alt="" class="logo__img">
+    </figure>
+    <div class="nav__list">
+      <ul class="nav__items--list">
+        <li>
+          <a href="./index.html" class="nav__item--link">Home</a>
+        </li>
+        <li>
+          <a href="/movies.html" class="nav__item--link">Movies</a>
+        </li>
+        <li>
+          <a href="#" class="nav__item--link nav__item--link--primary click">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main id="movies__main">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="movies__header">
+
+            <h2 class="section__title books__header--title">
+              All <span class="purple">Movies</span>
+            </h2>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected >Sort</option>
+              <option value="LOW_TO_HIGH">Price, Low to High</option>
+              <option value="HIGH_TO_LOW">Price, High to Low</option>
+              <option value="RATING">Rating</option>
+            </select>
+          </div>
+          <div class="movies movies__loading ">
+            <i class="fas fa-spinner movies__loading--spinner"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

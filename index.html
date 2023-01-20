@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./index.js" defer></script>
+  <!-- <script src="./movies.js" defer></script> -->
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <title>ComFlix-Home</title>
+</head>
+
+<body>
+  <section id="home">
+    <nav>
+      <figure class="logo__img--wrapper">
+        <img src="./assets/blinker-icon.png" alt="" class="logo__img">
+      </figure>
+      <div class="nav__list">
+        <ul class="nav__items--list">
+          <li>
+            <a href="#home" class="nav__item--link">Home</a>
+          </li>
+          <li>
+            <a href="/movies.html" class="nav__item--link">Movies</a>
+          </li>
+          <li>
+            <a href="#" class="nav__item--link nav__item--link--primary click">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <h1 class="header__title"><span class="purple">San Francisco's</span> One-Stop Shop for Movie Discovery</h1>
+          <h2 class="header__sub-title">Find Your Dream Movie with <span class="purple">Blinker</span></h2>
+          <div class="input__form">
+            <input type="text" name="movieName" class="search__input" placeholder="Ex: Fast & Furious" onchange="searchMovie(event)">
+            <button class="click" name="movieName">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <figure class="home__img--wrapper">
+            <img src="./assets/undraw_home_cinema_l7yl.svg" alt="" class="home__img">
+          </figure>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <main id="movies__main">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="movies__header">
+
+            <h2 class="section__title movie__header--title">
+              All <span class="purple">Movies</span>
+            </h2>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected >Sort</option>
+              <option value="LOW_TO_HIGH">Price, Low to High</option>
+              <option value="HIGH_TO_LOW">Price, High to Low</option>
+              <option value="RATING">Rating</option>
+            </select>
+          </div>
+          <div class="movies movies__loading ">
+            
+            <!-- <i class="fas fa-spinner movies__loading--spinner"></i> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
