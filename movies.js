@@ -1,28 +1,25 @@
-async function fetchMovie() {
-  const movieResponse = await fetch(`https://omdbapi.com/?apikey=84e956e5&s=${}`)
+const userSearch = localStorage.getItem('movieName')
+async function fetchMovie(movieName) {
+  const movieResponse = await fetch(
+    `https://www.omdbapi.com/?apikey=84e956e5&s=${movieName}`
+    );
+  const moviesWrapper = document.querySelector('.movies')
+  const movieData = await movieResponse.json();
+  console.log(movieData)
+
+  const movies = movieData.Search.map((movie) => {
+     console.log(movie)
+     return `<div class="movie">
+              <figure class="movie__img--wrapper">
+                <img src="${movie.Poster}" alt="">
+              </figure>
+              <h2 class="movie__title">${movie.Title}</h2>
+              <p class="year">${movie.Year}</p>
+              <p class="type">${movie.Type}</p>
+            </div>`
+  }).join('')
+
+  moviesWrapper.innerHTML += movies
 }
 
-
-
-
-const booksHTML = movies
-.map((movie) => {
-  return `<div class="book">
-  <figure class="book__img--wrapper">
-    <img class="book__img" src="${movie.url}" alt="">
-  </figure>
-  <div class="${book.title}">
-    Rich Dad Poor Dad
-  </div>
-  <div class=""${book.rating}">
-    ${ratingsHTML(book.rating)}
-  </div>
-  <div class="book__price">
-   ${priceHTML(book.originalPrice, book.salePrice)}
-  </div>
-</div>`;
-})
-.join(" ");
-//  console.log(booksHTML)
-
-booksWrapper.innerHTML = booksHTML;
+fetchMovie(userSearch)

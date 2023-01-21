@@ -130,8 +130,13 @@ button {
 .fa-arrow-right {
   font-size: 32px;
 
-color: #fff;}
+color: #fff;
+}
 
+#home {
+  height: 100vh;
+  background-color: rgba(115, 66, 214, 0.1)
+}
 .home__img--wrapper {
   margin: 24px auto;
   width: 500px;
@@ -148,4 +153,14 @@ color: #fff;}
   margin-top: 56px;
   font-size: 48px;
   text-align: center;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  padding: 12px;
+  width: 50%;
 }
