@@ -1,16 +1,16 @@
 let movieInfo = localStorage.getItem("movieTitle");
 
-const movieDetailWrapper = document.querySelector(".movie")
-console.log(movieDetailWrapper)
 async function showMovieDetails(movieInfo) {
+  const movieDetailWrapper = document.querySelector(".movie")
   const movieResponse = await fetch(
     `https://www.omdbapi.com/?apikey=84e956e5&i=${movieInfo}`
     );
-    const movieData = await movieResponse.json();
-    const movieDetails = movieData;
-    const movieDetailsHTML = showDetails(movieDetails);
-    console.log(movieDetailsHTML);
-    movieDetailWrapper.innerHTML += movieDetailsHTML;
+  console.log(movieDetailWrapper)
+  const movieData = await movieResponse.json();
+  const movieDetails = movieData;
+  const movieDetailsHTML = showDetails(movieDetails);
+  console.log(movieDetailsHTML);
+  movieDetailWrapper.innerHTML += movieDetailsHTML;
 }
 
 function showDetails(movie) {
