@@ -32,6 +32,13 @@
     <section>
       <div class="container">
         <div class="row">
+          <select name="filter" id="" class="filter" onchange="filterMovies(event)">
+            <option value="" disabled selected>Sort</option>
+            <option value="A__TO__Z">A to Z</option>
+            <option value="Z__TO__A">Z to A</option>
+            <option value="RATINGS">Ratings</option>
+            <option value="YEAR">Year</option>
+          </select>
           <div class="movies movies__loading ">
             <i class="fas fa-spinner movies__loading--spinner"></i>
           </div>
