@@ -11,7 +11,10 @@
   transition: all 300ms ease;
   box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.3);
 }
-
+.filter{
+  font-size: 20px;
+  border-radius: 12px;
+}
 .click:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.3);
@@ -264,7 +267,8 @@ footer {
 }
 
 .footer__logo {
-  margin-top: 12px;
+  display: flex;
+  margin-top: 32px;
   width: 100%;
 
 }
@@ -328,5 +332,27 @@ footer {
 
   .home__img {
     margin-top: 32px;
+  }
+
+  .movie {
+    width: 100%;
+  }
+
+  .movies {
+    flex-direction: column;
+  }
+
+  .movies__title {
+    width: 100%;
+  }
+
+  
+  .footer__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .movies__wrapper {
+    padding: 32px 0;
   }
 }

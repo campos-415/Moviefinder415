@@ -35,17 +35,19 @@
         <div class="row">
           <div class="input__form">
             <input type="text" name="movieName" class="search__input" placeholder="Ex: Fast & Furious" onchange="searchMovie(event)">
-            <button class="click" name="movieName">
+            <button class="click input__button" name="movieName">
               <i class="fas fa-arrow-right"></i>
             </button>
           </div>
-          <select name="filter" id="" class="filter" onchange="filterMovies(event)">
-            <option value="" disabled selected>Sort</option>
-            <option value="OLD__TO__NEW">Old to New</option>
-            <option value="NEW__TO__OLD">New to Old</option>
-          </select>
-          <div class="movies movies__loading ">
-            <!-- <i class="fas fa-spinner movies__loading--spinner"></i> -->
+          <div class="movies__wrapper">
+            <select name="filter" id="" class="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="OLD__TO__NEW">Old to New</option>
+              <option value="NEW__TO__OLD">New to Old</option>
+            </select>
+            <div class="movies movies__loading ">
+              <!-- <i class="fas fa-spinner movies__loading--spinner"></i> -->
+            </div>
           </div>
         </div>
       </div>
