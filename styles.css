@@ -352,7 +352,39 @@ footer {
     align-items: center;
   }
 
-  .movies__wrapper {
-    padding: 32px 0;
+  .movie__wrapper {
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  .movie__title {
+    font-size: 32px;
+  }
+  .movie-details__img {
+    width: 100%;
+  }
+  .movie__description--para {
+    font-size: 12px;
+  }
+  .highlight {
+    font-size: 16px;
+  }
+
+  .movie-detail__description--wrapper{
+    width: 100%;
+  }
+
+  .movie__details {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .similar__movies--title {
+    font-size: 40px;
+  }
+
+  .similar__movies {
+    flex-direction: column;
   }
 }
