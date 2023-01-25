@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
-  <script src="./movies.js"></script>
-  <!-- <script src="./index.js"></script> -->
+  <script src="./movies.js" defer></script>
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="./index.js" defer></script>
   <title>ComFlix-Movies</title>
 </head>
 <body>
@@ -32,18 +33,41 @@
     <section>
       <div class="container">
         <div class="row">
+          <div class="input__form">
+            <input type="text" name="movieName" class="search__input" placeholder="Ex: Fast & Furious" onchange="searchMovie(event)">
+            <button class="click" name="movieName">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
           <select name="filter" id="" class="filter" onchange="filterMovies(event)">
             <option value="" disabled selected>Sort</option>
             <option value="OLD__TO__NEW">Old to New</option>
             <option value="NEW__TO__OLD">New to Old</option>
-            <option value="RATINGS">Ratings</option>
           </select>
           <div class="movies movies__loading ">
-            <i class="fas fa-spinner movies__loading--spinner"></i>
+            <!-- <i class="fas fa-spinner movies__loading--spinner"></i> -->
           </div>
         </div>
       </div>
     </section>
   </main>
+  <footer>
+    <div class="container">
+      <div class="row row__column">
+        <a href="#">
+          <figure class="footer__logo">
+            <img src="./assets/blinker-icon.png" class="footer__logo--img" alt="">
+          </figure>
+        </a>
+        <div class="footer__list">
+          <a href="./index.html" class="footer__link">Home</a>
+          <a class="footer__link no-cursor">About</a>
+          <a href="./movies.html" class="footer__link">Movie</a>
+          <a class="footer__link no-cursor">Contact</a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2021 Library</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

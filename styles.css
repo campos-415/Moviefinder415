@@ -8,8 +8,10 @@
 }
 
 .click {
+  transition: all 300ms ease;
   box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.3);
 }
+
 .click:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.3);
@@ -52,6 +54,7 @@ nav {
   padding: 12px 0;
 
 }
+
 .logo__img--wrapper {
   width: 200px;
 }
@@ -130,13 +133,14 @@ button {
 .fa-arrow-right {
   font-size: 32px;
 
-color: #fff;
+  color: #fff;
 }
 
 #home {
   height: 100vh;
   background-color: rgba(115, 66, 214, 0.1)
 }
+
 .home__img--wrapper {
   margin: 24px auto;
   width: 500px;
@@ -149,18 +153,136 @@ color: #fff;
 
 /* MOVIES */
 
-.movie__header--title {
-  margin-top: 56px;
-  font-size: 48px;
-  text-align: center;
+.movies__title {
+  font-size: 24px;
+  max-width: 75%;
+  margin-top: 16px;
+
 }
 
 .movies {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
+
 .movie {
-  padding: 12px;
+  width: calc(100% / 3);
+  margin-top: 48px;
+}
+
+.movie__img {
+  border-radius: 12px;
+  transition: all 300ms ease;
+}
+
+.movie__img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.3);
+}
+
+/* MOVIE DETAILS*/
+
+.movie__details {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.movie__title {
+  font-size: 48px;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.movie-details__img {
+  width: 100%;
+}
+
+.movie__img--wrapper {
+  /* margin: 0 auto; */
+  width: 350px;
+}
+
+.movie__description--para {
+  margin-top: 16px;
+  font-size: 20px;
+
+}
+
+.highlight {
+  font-size: 24px;
+}
+
+.movie-detail__description--wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 400px;
+}
+
+.img-title__wrapper {
+  display: flex;
   width: 50%;
+
+}
+
+.movie__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  align-items: flex-start;
+}
+
+/* SIMILAR MOVIES */
+
+.similar__movies--title {
+  font-size: 48px;
+}
+
+.similar__movies--wrapper {
+  margin-top: 72px;
+}
+
+.similar__movies {
+  display: flex;
+}
+
+/* 
+FOOTER
+*/
+
+footer { 
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+}
+
+.footer__logo {
+  margin-top: 12px;
+  width: 100%;
+
+}
+
+.footer__logo--img {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.footer__link,
+.footer__copyright {
+  color: #fff;
+}
+
+.footer__list {
+  margin: 20px 0 24px 0;
+}
+
+.footer__link {
+  padding: 0 8px;
 }

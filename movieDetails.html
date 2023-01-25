@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <script src="./movieDetails.js" defer></script>
+  <!-- <script src="./movies.js" defer></script> -->
   <title>Comflix</title>
 </head>
 <body>
@@ -28,11 +29,35 @@
     </div>
   </nav>
   <main>
-    <div class="movie__details">
-      <div class="movie">
-
+    <div class="container">
+      <div class="row">
+        <div class="movie__details">
+        </div>
+        <div class="similar__movies--wrapper">
+          <h1 class="similar__movies--title">More Like <span class="purple">This</span></h1>
+          <div class="similar__movies">
+          </div>
+        </div>
       </div>
     </div>
   </main>
+  <footer>
+    <div class="container">
+      <div class="row row__column">
+        <a href="#">
+          <figure class="footer__logo">
+            <img src="assets/blinker-icon.png" class="footer__logo--img" alt="">
+          </figure>
+        </a>
+        <div class="footer__list">
+          <a href="./index.html" class="footer__link">Home</a>
+          <a class="footer__link no-cursor">About</a>
+          <a href="./movies.html" class="footer__link">Books</a>
+          <a class="footer__link no-cursor">Contact</a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2021 Library</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
