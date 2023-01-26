@@ -34,8 +34,8 @@ function getTitle(movieTitle) {
 
 function moviesHTML(movie) {
   return `<div class="movie" onclick="getTitle('${movie.imdbID}')">
-  <figure class="movie__img--wrapper">
-  <img class="movie__img" src="${movie.Poster}">
+  <figure class="movies__img--wrapper">
+  <img class="movies__img" src="${movie.Poster}">
   </figure>
   <h2  class="movies__title ">${movie.Title}</h2>
   <h3 class="type purple">${movie.Type}</h3>
