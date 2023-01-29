@@ -12,11 +12,29 @@
   <title>ComFlix-Home</title>
 </head>
 
-<body>
-  <section id="home">
+<body >
+  <section id="home"> 
+    <div class="menu">
+      <button onclick="closeMenu()" class="close--menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="nav__items--list--menu">
+        <li>
+          <a href="#home"  onclick="closeMenu()" class="nav__item--link--menu">Home</a>
+        </li>
+        <li>
+          <a href="/movies.html" onclick="closeMenu()" class="nav__item--link--menu">Movies</a>
+        </li>
+        <li>
+          <a href="#" onclick="closeMenu()" class="nav__item--link--menu nav__item--link--primary click">Contact</a>
+        </li>
+      </ul>
+    </div>
     <nav>
       <figure class="logo__img--wrapper">
-        <img src="./assets/blinker-icon.png" alt="" class="logo__img">
+        <a href="./index.html">
+          <img src="./assets/blinker-icon.png" alt="" class="logo__img">
+        </a>
       </figure>
       <div class="nav__list">
         <ul class="nav__items--list">
@@ -31,6 +49,9 @@
           </li>
         </ul>
       </div>
+      <button onclick="openMenu()" class="open--menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
     <header class="header">
       <div class="container">
@@ -39,7 +60,7 @@
           <h2 class="header__sub-title">Find Your Dream Movie with <span class="purple">Blinker</span></h2>
           <div class="input__form">
             <input type="text" name="movieName" class="search__input" placeholder="Ex: Fast & Furious" onchange="searchMovie(event)">
-            <button class="click input__button" name="movieName">
+            <button class="click input__button buttons" name="movieName">
               <i class="fas fa-arrow-right"></i>
             </button>
           </div>
