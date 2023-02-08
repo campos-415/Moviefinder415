@@ -255,49 +255,6 @@ nav {
   display: flex;
 }
 
-/* 
-FOOTER
-*/
-
-footer { 
-  display: flex;  
-  align-items: center;
-  justify-content: center;
-  background-color: #242424;
-}
-
-.footer__logo {
-  display: flex;
-  margin-top: 32px;
-  width: 100%;
-
-}
-
-.footer__logo--img {
-  margin: 0 auto;
-  width: 200px;
-}
-
-.footer__link,
-.footer__copyright {
-  color: #fff;
-}
-
-.footer__list {
-  margin: 20px 0 24px 0;
-}
-
-.footer__link {
-  padding: 0 8px;
-}
-
-.row__column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
 /* MENU SECTION */
 
 .open--menu,
